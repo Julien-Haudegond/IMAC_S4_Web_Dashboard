@@ -1,0 +1,36 @@
+{
+  "name": "imac_s4_web_dashboard",
+  "version": "1.0.0",
+  "description": "Frontend application built with Hyperapp framework.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel ./index.html -p 3000 --out-dir ./dist",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Julien-Haudegond/IMAC_S4_Web_Dashboard.git"
+  },
+  "author": "IMAC students",
+  "bugs": {
+    "url": "https://github.com/Julien-Haudegond/IMAC_S4_Web_Dashboard/issues"
+  },
+  "homepage": "https://github.com/Julien-Haudegond/IMAC_S4_Web_Dashboard#readme",
+  "dependencies": {
+    "@hyperapp/logger": "^0.5.0",
+    "hyperapp": "^1.2.10"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-loader": "^3.0.2",
+    "eslint-plugin-fp": "^2.3.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "parcel": "^1.12.4"
+  }
+}
