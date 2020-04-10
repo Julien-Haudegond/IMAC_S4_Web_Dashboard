@@ -22,7 +22,7 @@ Open a shell inside the root folder.
 npm install
 ```
 
-Now, you should have a sub-folder *node_modules*
+Now, you should have a sub-folder *node_modules*.
 
 ### Run Server
 
@@ -33,6 +33,7 @@ npm run start
 ```
 
 The server will be opened on *localhost:3000*.
+To make it stop, use Ctrl+C.
 
 ### Check JS Syntax with Eslint
 

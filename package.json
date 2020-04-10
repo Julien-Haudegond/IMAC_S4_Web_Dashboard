@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Julien-Haudegond/IMAC_S4_Web_Dashboard#readme",
   "dependencies": {
     "@hyperapp/logger": "^0.5.0",
+    "axios": "^0.19.2",
     "hyperapp": "^1.2.10"
   },
   "devDependencies": {
