@@ -44,3 +44,14 @@ npm run lint
 ```
 
 If nothing happens, everything is right. Else, warnings or errors will be written there.
+
+#### VSCode User?
+
+If you are using VSCode, there is a highly convenient [extension](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) which allows to use Eslint and detect every error, everytime, while typing code.
+The only thing to do is to open the root folder inside of VSCode, by right-clicking or with a shell:
+
+```bash
+code .
+```
+
+The errors will appear at the left bottom of the VSCode window and they will be emphasized in the code with a wonderful little red wave.
