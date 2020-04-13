@@ -1,9 +1,9 @@
 import { h } from 'hyperapp'
 
-import SideBarDomaine from '../SideBar/SideBarDomaine'
-import SideBarLocalisation from '../SideBar/SideBarLocalisation'
-import SideBarPeriode from '../SideBar/SideBarPeriode'
-import SideBarLogo from '../SideBar/SideBarLogo'
+import SideBarDomaine from '../sideBar/SideBarDomaine'
+import SideBarLocalisation from '../sideBar/SideBarLocalisation'
+import SideBarPeriode from '../sideBar/SideBarPeriode'
+import SideBarLogo from '../sideBar/SideBarLogo'
 
 export default (state, actions) => {
 	return(
