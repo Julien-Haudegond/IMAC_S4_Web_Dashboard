@@ -5,7 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel ./index.html -p 3000 --out-dir ./dist",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "clean": "rimraf .cache dist",
+    "clean-all": "rimraf .cache dist node_modules"
   },
   "repository": {
     "type": "git",
@@ -34,6 +36,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-standard": "^4.0.1",
-    "parcel": "^1.12.4"
+    "parcel": "^1.12.4",
+    "rimraf": "^3.0.2"
   }
 }
