@@ -1,0 +1,15 @@
+@import './MainContent';
+@import './SideBar';
+
+body {
+  font-family:"Roboto", sans-serif;
+  margin:0px;
+  padding:0px;
+}
+
+#container{
+  display:flex;
+  justify-content:flex-start;
+  width:100%;
+  height:100%;
+}
