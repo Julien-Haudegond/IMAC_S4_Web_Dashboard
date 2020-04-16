@@ -1,5 +1,6 @@
 export default {
-    festivals: [],
-	num: 0,
-    name: 'Andy Dufresne'
+  ready: false,
+  loading: false,
+  festivals: [],
+  filters: []
 }
