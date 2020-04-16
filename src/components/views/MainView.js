@@ -11,7 +11,9 @@ export default (state, actions) => {
     return (
       <div id="container">
         <SideBar
-          domains={state.filters.find(item => item.name === 'domaine')}>
+          domains={state.filters.find(item => item.name === 'domaine')}
+          regions={state.filters.find(item => item.name === 'region')}
+          months={state.filters.find(item => item.name === 'mois_habituel_de_debut')}>
         </SideBar>
         <MainContent></MainContent>
       </div>
