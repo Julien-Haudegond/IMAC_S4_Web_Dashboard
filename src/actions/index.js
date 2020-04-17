@@ -2,14 +2,16 @@ import axios from 'axios'
 
 export default {
   setLoading: () => state => {
-    // const newState = await {...state, ready: true}
-    // return newState
+    document.body.classList.add("loader");  
+    let htmlContent = '<p id="loading"> La fête va bientôt commencer... <img src="https://zupimages.net/up/20/16/m42g.gif"></p>';
+    document.body.insertAdjacentHTML('afterbegin', htmlContent);
+
     return { ...state, ready: false, loading: true }
   },
 
   setReady: () => state => {
-    // const newState = await {...state, ready: true}
-    // return newState
+    document.body.classList.remove("loader");
+    document.getElementById("loading").remove();
     return { ...state, ready: true, loading: false }
   },
 

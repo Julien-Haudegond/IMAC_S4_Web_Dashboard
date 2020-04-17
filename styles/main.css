@@ -13,3 +13,36 @@ body {
   width:100%;
   height:100%;
 }
+
+.loader{
+  background-color: #FFFFFA;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  opacity: 1;
+  z-index: 10000;
+  transition : all 400ms ease;
+  text-align :center;
+  color : white;
+}
+
+p#loading{
+  text-align :center;
+  padding-top: 100px;
+  font-family:"Roboto", sans-serif; 
+  color : #19A09C;
+}
+
+p#loading img{
+  width: 50px;
+  height:50px;
+  text-align: center;
+  display: block;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.opacity{
+  opacity: 0;
+}
