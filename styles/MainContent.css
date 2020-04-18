@@ -1,9 +1,9 @@
 .main {
   position: relative;
-  width: 100vw;
+  width: 75vw;
   height: 100vh;
   top: 0;
-  left: 0;
+  left: 25vw;
   background-color: #FFFFFA;
   padding-top: 20px;
   font-weight:bold;
@@ -22,6 +22,11 @@
   margin:0px;
   position: absolute;
   z-index:4;
+}
+
+.domain-view h1{
+  position:static;
+  padding:30px 0px 40px 0px;
 }
 
 .main h1 mark{
@@ -59,3 +64,38 @@ p mark{
   padding: 0px 2px 0px 2px;
 }
 
+@media screen and (max-width: 780px){
+  .main {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0vw;
+    padding-top: 80px;
+  }
+  
+  .circle{
+    position: absolute;
+    top: -150px;
+    right:-150px;
+  }
+
+  .main h1 {
+    margin-top:10px;
+    padding:20px;
+  }
+
+  .main .image_home{
+    margin-left:0px;
+  }
+
+  .main .text_home{
+    width:100%;
+    position: absolute;
+    margin-top: 200px;
+    text-align: center;
+  }
+
+  .main .text_home p:first-child{
+    margin-top: 0px;
+  }
+}

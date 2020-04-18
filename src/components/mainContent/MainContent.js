@@ -8,7 +8,7 @@ import PeriodContent from './PeriodContent'
 
 export default ({ festivals }) => {
   return (
-    <div>
+    <div class="main">
       <Switch>
         <Route path='/' render={() =>
           <HomeContent></HomeContent>
