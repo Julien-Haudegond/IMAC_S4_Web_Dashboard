@@ -1,17 +1,20 @@
 import axios from 'axios'
+import { location } from '@hyperapp/router'
 
 export default {
+  location: location.actions,
+
   setLoading: () => state => {
-    document.body.classList.add("loader");  
-    let htmlContent = '<p id="loading"> La fête va bientôt commencer... <img src="https://zupimages.net/up/20/16/m42g.gif"></p>';
-    document.body.insertAdjacentHTML('afterbegin', htmlContent);
+    document.body.classList.add('loader')
+    const htmlContent = '<p id="loading"> La fête va bientôt commencer... <img src="https://zupimages.net/up/20/16/m42g.gif"></p>'
+    document.body.insertAdjacentHTML('afterbegin', htmlContent)
 
     return { ...state, ready: false, loading: true }
   },
 
   setReady: () => state => {
-    document.body.classList.remove("loader");
-    document.getElementById("loading").remove();
+    document.body.classList.remove('loader')
+    document.getElementById('loading').remove()
     return { ...state, ready: true, loading: false }
   },
 

@@ -15,7 +15,7 @@ export default (state, actions) => {
           regions={state.filters.find(item => item.name === 'region')}
           months={state.filters.find(item => item.name === 'mois_habituel_de_debut')}>
         </SideBar>
-        <MainContent></MainContent>
+        <MainContent festivals={state.festivals}></MainContent>
       </div>
     )
   }

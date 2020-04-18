@@ -1,21 +1,55 @@
 import { h } from 'hyperapp'
+import { Route, Switch } from '@hyperapp/router'
 
-export default () => {
+import HomeContent from './HomeContent'
+import DomainContent from './DomainContent'
+import LocalisationContent from './LocalisationContent'
+import PeriodContent from './PeriodContent'
+
+export default ({ festivals }) => {
   return (
-    <div class="main">
-      <div class="circle">
-        <img src="https:zupimages.net/up/20/15/vdj5.png" alt="circle"/>
-      </div>
-      <h1> Bonjour, envie d’être <mark> un as des festivals </mark> <br/> de bandes dessinées ? </h1>
-      <div class="content">
-        <div class="image_home">
-          <img src="https:zupimages.net/up/20/15/n3lq.png" alt="image_home"/>
-        </div>
-        <div class="text_home">
-          <p> <mark> Vous </mark> pouvez ici chercher <br/> des informations sur les <br/> festivals français. </p>
-          <p> <mark> Ils </mark> sont classés par <br/> domaines, localisations et <br/> périodes. </p>
-        </div>
-      </div>
+    <div>
+      <Switch>
+        <Route path='/' render={() =>
+          <HomeContent></HomeContent>
+        } />
+
+        <Route path='/domain/:name' render={({ match }) => {
+          const name = match.params.name
+          const title = match.params.name
+          return (
+            <DomainContent
+              title={title}
+              festivals={festivals.filter(item => item.domain === name)}>
+            </DomainContent>
+          )
+        }} />
+
+        <Route path='/domain/:name/:subname' render={({ match }) => {
+          const name = match.params.subname
+          const title = match.params.name + ' /// ' + match.params.subname
+          return (
+            <DomainContent
+              title={title}
+              festivals={festivals.filter(item => item.subdomain === name)}>
+            </DomainContent>
+          )
+        }} />
+
+        <Route path='/localisation/:region' render={({ match }) => {
+          const title = match.params.region
+          return (
+            <LocalisationContent title={title}></LocalisationContent>
+          )
+        }} />
+
+        <Route path='/period/:month' render={({ match }) => {
+          const title = match.params.month
+          return (
+            <PeriodContent title={title}></PeriodContent>
+          )
+        }} />
+      </Switch>
     </div>
   )
 }
