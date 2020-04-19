@@ -121,6 +121,24 @@ label {
   color:#7DC9C7;
 }
 
+.sub-item-localisation{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sub-item-localisation a:hover{
+  color:#7DC9C7; 
+}
+
+.sub-item-period{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sub-item-period a:hover{
+  color:#7DC9C7; 
+}
+
 .logo{
   margin-top:30px;
   margin-bottom: 50px;
