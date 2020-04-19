@@ -24,9 +24,50 @@
   z-index:4;
 }
 
+/*
+.domain{
+width : 1180px;
+}
+*/
+
 .domain-view h1{
   position:static;
   padding:30px 0px 40px 0px;
+}
+
+.localisation-view h1{
+  position:static;
+  padding:30px 0px 40px 0px;
+}
+
+.period-view h1{
+  position:static;
+  padding:30px 0px 40px 0px;
+}
+
+.domain-bar .localisation-bar .period-bar{
+  font-family:"Roboto", sans-serif;
+  color:#20A39F;
+  font-weight: normal;
+}
+
+#bar{
+  position: absolute;
+  display: block;
+  height: 32px;
+  background-color: #7DC9C7;
+  border-radius: 20px;
+  transition:width 1500ms ease;
+}
+
+#under-bar{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: block;
+  height: 32px;
+  background-color: #20A39F;
+  border-radius: 20px;
 }
 
 .main h1 mark{

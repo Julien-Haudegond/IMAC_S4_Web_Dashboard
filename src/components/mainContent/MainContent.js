@@ -37,16 +37,23 @@ export default ({ festivals }) => {
         }} />
 
         <Route path='/localisation/:region' render={({ match }) => {
-          const title = match.params.region
+          const region = match.params.region
           return (
-            <LocalisationContent title={title}></LocalisationContent>
+            <LocalisationContent 
+            region={region}
+            festivals={festivals.filter(item => item.region === region)}>
+            </LocalisationContent>
           )
         }} />
 
         <Route path='/period/:month' render={({ match }) => {
-          const title = match.params.month
+          const startMonth = match.params.startMonth
+          const month = match.params.month
           return (
-            <PeriodContent title={title}></PeriodContent>
+            <PeriodContent 
+            month={month}
+            festivals={festivals.filter(item => item.startMonth === month)}>
+            </PeriodContent>
           )
         }} />
       </Switch>
