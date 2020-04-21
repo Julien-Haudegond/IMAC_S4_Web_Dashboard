@@ -1,4 +1,5 @@
 import { h } from 'hyperapp'
+import Dougnut from '../graphics/Dougnut'
 
 export default ({ title, festivals }) => {
   const nboffestiv = festivals.length
