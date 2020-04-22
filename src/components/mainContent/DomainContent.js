@@ -1,25 +1,15 @@
 import { h } from 'hyperapp'
 import Dougnut from '../graphics/Dougnut'
+import Loadingbar from '../graphics/Loadingbar'
 
-export default ({ title, festivals }) => {
-  const nboffestiv = festivals.length
-  const totalnboffestiv = 3136
-  const percent = Math.round((nboffestiv * 100) / totalnboffestiv) + '%'
-
-  let pluriel = ''
-
-  if (nboffestiv > 1) {
-    pluriel = 's'
-  }
+export default ({ title, festivals, totalCount }) => {
   return (
     <div class="domain">
-      <div class="domain-bar">
-        <div id="under-bar">
-          <div id="bar" style={{ width: percent }}>
-          </div>
-        </div>
-        <p> {nboffestiv} festival{pluriel} de ce domaine sur {totalnboffestiv} festivals tous domaines confondus. </p>
-      </div>
+      <Loadingbar
+        festivalsnb ={festivals.length}
+        festivalsnbtotal = {totalCount}
+        festivalsview = {'domain'}
+      ></Loadingbar>
       <div class="domain-view">
         <Dougnut
           title = {'Titre1'}

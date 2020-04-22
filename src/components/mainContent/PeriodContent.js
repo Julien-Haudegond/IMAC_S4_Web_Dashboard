@@ -1,26 +1,15 @@
 import { h } from 'hyperapp'
+import Loadingbar from '../graphics/Loadingbar'
 
-export default ({ month, festivals }) => {
-
-  const nboffestiv = festivals.length
-  const totalnboffestiv = 3136
-  const percent = Math.round((nboffestiv * 100) / totalnboffestiv) + '%'
-
-  var pluriel = ''
-
-  if (nboffestiv > 1) {
-	pluriel = 's'
-  }
+export default ({ month, festivals, totalCount }) => {
 
   return (
     <div class="period">
-      <div class="period-bar">
-        <div id="under-bar">
-          <div id="bar" style={{ width: percent }}>
-          </div>
-        </div>
-        <p> {nboffestiv} festival{pluriel} à cette période sur {totalnboffestiv} festivals par an. </p>
-      </div>
+      <Loadingbar
+        festivalsnb ={festivals.length}
+        festivalsnbtotal = {totalCount}
+        festivalsview = {'period'}
+      ></Loadingbar>
       <div class="period-view">
         <h1>Period view: {month}</h1> {
           festivals.map(item => <p>{item.name}</p>)

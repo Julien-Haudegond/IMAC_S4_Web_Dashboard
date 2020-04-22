@@ -20,6 +20,7 @@ export default ({ festivals }) => {
           return (
             <DomainContent
               title={title}
+              totalCount={festivals.length}
               festivals={festivals.filter(item => item.domain === name)}>
             </DomainContent>
           )
@@ -31,6 +32,7 @@ export default ({ festivals }) => {
           return (
             <DomainContent
               title={title}
+              totalCount={festivals.length}
               festivals={festivals.filter(item => item.subdomain === name)}>
             </DomainContent>
           )
@@ -41,6 +43,7 @@ export default ({ festivals }) => {
           return (
             <LocalisationContent 
             region={region}
+            totalCount={festivals.length}
             festivals={festivals.filter(item => item.region === region)}>
             </LocalisationContent>
           )
@@ -52,6 +55,7 @@ export default ({ festivals }) => {
           return (
             <PeriodContent 
             month={month}
+            totalCount={festivals.length}
             festivals={festivals.filter(item => item.startMonth === month)}>
             </PeriodContent>
           )
