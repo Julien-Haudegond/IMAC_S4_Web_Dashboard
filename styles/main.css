@@ -2,6 +2,7 @@
 @import './SideBar';
 @import './Loadingbar';
 @import './Dougnut';
+@import './Top3';
 
 body {
   font-family:"Roboto", sans-serif;

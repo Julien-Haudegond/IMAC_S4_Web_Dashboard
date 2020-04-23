@@ -41,7 +41,7 @@ export default ({ festivals }) => {
         <Route path='/localisation/:region' render={({ match }) => {
           const region = match.params.region
           return (
-            <LocalisationContent 
+            <LocalisationContent
               region={region}
               totalCount={festivals.length}
               festivals={festivals.filter(item => item.region === region)}>
@@ -53,7 +53,7 @@ export default ({ festivals }) => {
           const startMonth = match.params.startMonth
           const month = match.params.month
           return (
-            <PeriodContent 
+            <PeriodContent
               month={month}
               totalCount={festivals.length}
               festivals={festivals.filter(item => item.startMonth === month)}>

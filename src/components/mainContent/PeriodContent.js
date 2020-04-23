@@ -2,6 +2,7 @@
 import { h } from 'hyperapp'
 import Dougnut from '../graphics/Dougnut'
 import Loadingbar from '../graphics/Loadingbar'
+import Top3 from '../graphics/Top3'
 
 export default ({ festivals, totalCount }) => {
   return (
@@ -34,6 +35,10 @@ export default ({ festivals, totalCount }) => {
         widthDoughnut = {250}
         heightDoughnut = {250}
       ></Dougnut>
+      <Top3
+        festivals = {festivals}
+        festivalsfilter = {'region'}>
+      </Top3>
     </div>
   )
 }
