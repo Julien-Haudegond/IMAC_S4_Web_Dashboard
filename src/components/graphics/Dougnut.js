@@ -27,7 +27,7 @@ const initChartJs = (element, props) => {
         display: true,
         text: props.titleChartDougnut,
         position: 'top',
-        fontSize: 35,
+        fontSize: 24,
         defaultFontFamily: 'Roboto',
         fontColor: 'black',
         fontStyle: 'bold'
@@ -37,7 +37,7 @@ const initChartJs = (element, props) => {
         position: 'bottom',
         labels: {
           defaultFontFamily: 'Roboto',
-          fontSize: 20,
+          fontSize: 18,
           fontColor: 'black',
           boxWidth: 30
         }

@@ -1,5 +1,7 @@
 @import './MainContent';
 @import './SideBar';
+@import './Loadingbar';
+@import './Dougnut';
 
 body {
   font-family:"Roboto", sans-serif;
@@ -46,9 +48,3 @@ p#loading img{
 .opacity{
   opacity: 0;
 }
-
-/*
-.domain{
-width : 1180px;
-}
-*/

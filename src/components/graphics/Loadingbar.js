@@ -7,11 +7,11 @@ export default ({ festivalsnb, festivalsnbtotal, festivalsview }) => {
     switch (festivalsview) {
       case 'domain':
         console.log(festivalsnbtotal)
-        return festivalsnb+' festival'+pluriel+' de ce domaine sur '+ festivalsnbtotal +' festivals tous domaines confondus.'
+        return festivalsnb + ' festival' + pluriel + ' de ce domaine sur ' + festivalsnbtotal + ' festivals tous domaines confondus.'
       case 'period':
-        return festivalsnb+' festival'+pluriel+' à cette période sur '+ festivalsnbtotal +' festivals toutes périodes confondues.'
+        return festivalsnb + ' festival' + pluriel + ' à cette période sur ' + festivalsnbtotal + ' festivals toutes périodes confondues.'
       case 'localisation':
-        return festivalsnb+' festival'+pluriel+' dans cette région sur '+ festivalsnbtotal +' festivals toutes régions confondues.'
+        return festivalsnb + ' festival' + pluriel + ' dans cette région sur ' + festivalsnbtotal + ' festivals toutes régions confondues.'
       default:
         return 'default'
     }

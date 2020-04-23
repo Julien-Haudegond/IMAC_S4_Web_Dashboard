@@ -1,7 +1,7 @@
 import { h } from 'hyperapp'
 import Loadingbar from '../graphics/Loadingbar'
 
-export default ({ region, festivals, totalCount }) => {
+export default ({ festivals, totalCount }) => {
   return (
     <div class="localisation">
       <Loadingbar
@@ -9,11 +9,6 @@ export default ({ region, festivals, totalCount }) => {
         festivalsnbtotal = {totalCount}
         festivalsview = {'localisation'}
       ></Loadingbar>
-      <div class="localisation-view">
-        <h1>Localisation view: {region}</h1> {
-          festivals.map(item => <p>{item.name}</p>)
-        }
-      </div>
     </div>
   )
 }

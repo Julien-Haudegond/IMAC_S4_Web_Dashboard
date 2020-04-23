@@ -42,9 +42,9 @@ export default ({ festivals }) => {
           const region = match.params.region
           return (
             <LocalisationContent 
-            region={region}
-            totalCount={festivals.length}
-            festivals={festivals.filter(item => item.region === region)}>
+              region={region}
+              totalCount={festivals.length}
+              festivals={festivals.filter(item => item.region === region)}>
             </LocalisationContent>
           )
         }} />
@@ -54,9 +54,9 @@ export default ({ festivals }) => {
           const month = match.params.month
           return (
             <PeriodContent 
-            month={month}
-            totalCount={festivals.length}
-            festivals={festivals.filter(item => item.startMonth === month)}>
+              month={month}
+              totalCount={festivals.length}
+              festivals={festivals.filter(item => item.startMonth === month)}>
             </PeriodContent>
           )
         }} />
