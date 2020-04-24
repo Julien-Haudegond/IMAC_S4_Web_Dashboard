@@ -1,10 +1,10 @@
 import { h } from 'hyperapp'
-import { getOrderedCities } from '../utils/Utils'
+import { getOrderedListWithOccurences } from '../utils/Utils'
 
 import King from '../../../images/king.png'
 
 export default ({ festivals, festivalsfilter }) => {
-  const orderedCities = getOrderedCities(festivals, festivalsfilter)
+  const orderedList = getOrderedListWithOccurences(festivals, festivalsfilter)
 
   const sentencechanging = (festivalsfilter) => {
     switch (festivalsfilter) {
@@ -25,9 +25,9 @@ export default ({ festivals, festivalsfilter }) => {
       <div class="under-top3">
         {
           <ul>
-            <li> <span> 1. </span> <p> {orderedCities[0][0]} </p> <img src={King}></img> <p> {orderedCities[0][1]} </p> </li>
-            <li> <span> 2. </span> <p> {orderedCities[1][0]} </p> <p> {orderedCities[1][1]} </p> </li>
-            <li> <span> 3. </span> <p> {orderedCities[2][0]} </p> <p>{orderedCities[2][1]} </p> </li>
+            <li> <span> 1. </span> <p> {orderedList[0][0]} </p> <img src={King}></img> <p> {orderedList[0][1]} </p> </li>
+            <li> <span> 2. </span> <p> {orderedList[1][0]} </p> <p> {orderedList[1][1]} </p> </li>
+            <li> <span> 3. </span> <p> {orderedList[2][0]} </p> <p>{orderedList[2][1]} </p> </li>
           </ul>
         }
       </div>
