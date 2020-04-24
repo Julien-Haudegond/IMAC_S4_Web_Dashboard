@@ -12,16 +12,6 @@ export default ({ festivals, indexSentence }) => {
         return 'Ville star de la région, la reine de la fête'
       case '3':
         return 'Département maudit de la région'
-      /*
-      case '4':
-        return 'Jour maudit, celui où les festivals manquent'
-      case '5':
-        return 'Jour star, celui où les festivals sont nombreux'
-      case '6':
-        return 'L évènement doyen de la région'
-      case '7':
-        return 'Le petit nouveau de la région'
-    */
       default:
         return 'default'
     }
