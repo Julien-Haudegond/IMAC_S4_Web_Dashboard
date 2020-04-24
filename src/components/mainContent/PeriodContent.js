@@ -3,6 +3,7 @@ import { h } from 'hyperapp'
 import Dougnut from '../graphics/Dougnut'
 import Loadingbar from '../graphics/Loadingbar'
 import Top3 from '../graphics/Top3'
+import Top1 from '../graphics/Top1'
 
 export default ({ festivals, totalCount }) => {
   return (
@@ -39,6 +40,10 @@ export default ({ festivals, totalCount }) => {
         festivals = {festivals}
         festivalsfilter = {'region'}>
       </Top3>
+      <Top1
+        festivals = {festivals}
+        indexSentence = {'1'}>
+      </Top1>
     </div>
   )
 }

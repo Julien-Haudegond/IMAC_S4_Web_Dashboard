@@ -3,6 +3,7 @@
 @import './Loadingbar';
 @import './Dougnut';
 @import './Top3';
+@import './Top1';
 
 body {
   font-family:"Roboto", sans-serif;
