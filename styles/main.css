@@ -4,6 +4,7 @@
 @import './Dougnut';
 @import './Top3';
 @import './Top1';
+@import './Counter';
 
 body {
   font-family:"Roboto", sans-serif;

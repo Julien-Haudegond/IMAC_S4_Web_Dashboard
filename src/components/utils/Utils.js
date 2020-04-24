@@ -1,4 +1,6 @@
-export const getOrderedListWithOccurences = (festivals, key, growing=false) => {
+/* eslint-disable fp/no-mutating-methods */
+/* eslint-disable no-unused-vars */
+export const getOrderedListWithOccurences = (festivals, key, growing = false) => {
   const list = festivals.map(item => item[key])
   const uniqueList = [...new Set(list)]
   const elementsAndTimes = new Map(uniqueList.map(item =>
@@ -13,12 +15,9 @@ export const getOrderedListWithOccurences = (festivals, key, growing=false) => {
 }
 
 export const getOrdereDataTopUn = (festivals, indexSentence) => {
-
   if (indexSentence === '1' || indexSentence === '2') {
     return getOrderedListWithOccurences(festivals, 'city')
-  }
-
-  else if (indexSentence === '3') {
+  } else if (indexSentence === '3') {
     return getOrderedListWithOccurences(festivals, 'department', true)
   }
 }

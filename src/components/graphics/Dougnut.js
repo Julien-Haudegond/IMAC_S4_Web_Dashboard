@@ -1,3 +1,4 @@
+/* eslint-disable fp/no-mutation */
 import { h } from 'hyperapp'
 import Chart from 'chart.js'
 
@@ -65,7 +66,7 @@ const updateChartJS = (element, data) => {
   })
 }
 
-export default ({ labelDoughnut, title, colorOfBackground, datas, widthDoughnut, heightDoughnut, titleChartDougnut}) =>
+export default ({ labelDoughnut, title, colorOfBackground, datas, widthDoughnut, heightDoughnut, titleChartDougnut }) =>
   <div id={`${title}_div`} class="doughnut">
     <canvas id={`${title}_canvas`}
       oncreate={(element) => initChartJs(element, { labelDoughnut, title, titleChartDougnut, colorOfBackground, datas, widthDoughnut, heightDoughnut })}
