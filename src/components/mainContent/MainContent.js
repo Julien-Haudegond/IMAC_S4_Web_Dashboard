@@ -9,7 +9,7 @@ import PeriodContent from './PeriodContent'
 export default ({ festivals }) => {
   return (
     <div class="main">
-      <Route path='/' render={() =>
+      <Route path='/IMAC_S4_Web_Dashboard/' render={() =>
         <HomeContent
           festivals={festivals}>
         </HomeContent>
