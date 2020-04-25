@@ -1,3 +1,4 @@
+/* eslint-disable fp/no-mutation */
 import { h } from 'hyperapp'
 import Chart from 'chart.js'
 
