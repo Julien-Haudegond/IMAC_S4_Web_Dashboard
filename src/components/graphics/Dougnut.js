@@ -1,3 +1,4 @@
+/* eslint-disable fp/no-mutation */
 import { h } from 'hyperapp'
 import Chart from 'chart.js'
 
@@ -27,7 +28,7 @@ const initChartJs = (element, props) => {
         display: true,
         text: props.titleChartDougnut,
         position: 'top',
-        fontSize: 35,
+        fontSize: 24,
         defaultFontFamily: 'Roboto',
         fontColor: 'black',
         fontStyle: 'bold'
@@ -37,7 +38,7 @@ const initChartJs = (element, props) => {
         position: 'bottom',
         labels: {
           defaultFontFamily: 'Roboto',
-          fontSize: 20,
+          fontSize: 18,
           fontColor: 'black',
           boxWidth: 30
         }
@@ -65,7 +66,7 @@ const updateChartJS = (element, data) => {
   })
 }
 
-export default ({ labelDoughnut, title, colorOfBackground, datas, widthDoughnut, heightDoughnut, titleChartDougnut}) =>
+export default ({ labelDoughnut, title, colorOfBackground, datas, widthDoughnut, heightDoughnut, titleChartDougnut }) =>
   <div id={`${title}_div`} class="doughnut">
     <canvas id={`${title}_canvas`}
       oncreate={(element) => initChartJs(element, { labelDoughnut, title, titleChartDougnut, colorOfBackground, datas, widthDoughnut, heightDoughnut })}

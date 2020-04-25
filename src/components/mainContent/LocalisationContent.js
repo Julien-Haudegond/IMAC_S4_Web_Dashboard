@@ -1,30 +1,32 @@
 import { h } from 'hyperapp'
+import Loadingbar from '../graphics/Loadingbar'
+import Top3 from '../graphics/Top3'
+import Top1 from '../graphics/Top1'
 
-export default ({ region, festivals }) => {
-  const nboffestiv = festivals.length
-  const totalnboffestiv = 3136
-  const percent = Math.round((nboffestiv * 100) / totalnboffestiv) + '%'
-
-  let pluriel = ''
-
-  if (nboffestiv > 1) {
-    pluriel = 's'
-  }
-
+export default ({ festivals, totalCount }) => {
   return (
     <div class="localisation">
-      <div class="localisation-bar">
-        <div id="under-bar">
-          <div id="bar" style={{ width: percent }}>
-          </div>
-        </div>
-        <p> {nboffestiv} festival{pluriel} de ce domaine sur {totalnboffestiv} festivals tous domaines confondus. </p>
-      </div>
-      <div class="localisation-view">
-        <h1>Localisation view: {region}</h1> {
-          festivals.map(item => <p>{item.name}</p>)
-        }
-      </div>
+      <Loadingbar
+        festivalsnb ={festivals.length}
+        festivalsnbtotal = {totalCount}
+        festivalsview = {'localisation'}
+      ></Loadingbar>
+      <Top3
+        festivals = {festivals}
+        festivalsfilter = {'department'}>
+      </Top3>
+      <Top3
+        festivals = {festivals}
+        festivalsfilter = {'domain'}>
+      </Top3>
+      <Top1
+        festivals = {festivals}
+        indexSentence = {'2'}>
+      </Top1>
+      <Top1
+        festivals = {festivals}
+        indexSentence = {'3'}>
+      </Top1>
     </div>
   )
 }
