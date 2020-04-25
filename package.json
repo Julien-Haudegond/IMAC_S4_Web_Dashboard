@@ -7,7 +7,7 @@
     "start": "parcel ./index.html -p 3000 --out-dir ./dist",
     "build": "parcel build ./index.html --out-dir ./docs --public-url /IMAC_S4_Web_Dashboard/",
     "lint": "eslint .",
-    "clean": "rimraf .cache dist docs",
+    "clean": "rimraf .cache dist",
     "clean-all": "rimraf .cache dist docs node_modules"
   },
   "repository": {
