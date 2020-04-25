@@ -1,6 +1,7 @@
 /* eslint-disable fp/no-loops */
 import { h } from 'hyperapp'
 import Dougnut from '../graphics/Dougnut'
+import Bar from '../graphics/Bar'
 import Loadingbar from '../graphics/Loadingbar'
 import Top3 from '../graphics/Top3'
 
@@ -13,6 +14,28 @@ export default ({ festivals, totalCount }) => {
         festivalsview = {'domain'}
       ></Loadingbar>
       <div class="domain-view">
+        <Bar
+          title={'Nombre de festivals'}
+          titleChartBar={"Pics d'affluences de ces festivals en fonction des mois"}
+          labelBar={['janvier', 'fevrier', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre']}
+          datas={[
+            festivals.filter(item => (item.startMonth === '01 (janvier)')).length,
+            festivals.filter(item => (item.startMonth === '02 (février)')).length,
+            festivals.filter(item => (item.startMonth === '03 (mars)')).length,
+            festivals.filter(item => (item.startMonth === '04 (avril)')).length,
+            festivals.filter(item => (item.startMonth === '05 (mai)')).length,
+            festivals.filter(item => (item.startMonth === '06 (juin)')).length,
+            festivals.filter(item => (item.startMonth === '07 (juillet)')).length,
+            festivals.filter(item => (item.startMonth === '08 (août)')).length,
+            festivals.filter(item => (item.startMonth === '09 (septembre)')).length,
+            festivals.filter(item => (item.startMonth === '10 (octobre)')).length,
+            festivals.filter(item => (item.startMonth === '11 (novembre)')).length,
+            festivals.filter(item => (item.startMonth === '12 (décembre)')).length
+          ]}
+          colorOfBackground={'#19a09c'}
+          widthBar={300}
+          heightBar={300}
+        ></Bar>
         <Dougnut
           title = {'Doughnut1'}
           titleChartDougnut = {'Répartition en fonction de la parité des départements'}

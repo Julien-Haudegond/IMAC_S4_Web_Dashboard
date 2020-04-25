@@ -4,7 +4,7 @@ import Chart from 'chart.js'
 const initChartJs = (element, props) => {
   const ctx = element.getContext('2d')
   const chart = new Chart(ctx, {
-    type: 'bar',
+    type: 'horizontalBar',
 
     data: {
       labels: props.labelBar,
@@ -20,25 +20,37 @@ const initChartJs = (element, props) => {
       width: props.widthBar,
       height: props.heightBar,
       style: 'background-color: #69d100',
-      offset: true,
+      offset: false,
       cutoutPercentage: 60,
       responsive: false,
-      maintainAspectRatio: true,
+      maintainAspectRatio: false,
+      scales: {
+        xAxes: [{
+          gridLines: {
+            display: false
+          }
+        }],
+        yAxes: [{
+          gridLines: {
+            display: false
+          }
+        }]
+      },
       title: {
         display: true,
         text: props.titleChartBar,
-        position: 'bottom',
-        fontSize: 35,
+        position: 'top',
+        fontSize: 25,
         defaultFontFamily: 'Roboto',
         fontColor: 'black',
         fontStyle: 'bold'
       },
       legend: {
         display: false,
-        position: 'bottom',
+        position: 'top',
         labels: {
           defaultFontFamily: 'Roboto',
-          fontSize: 20,
+          fontSize: 22,
           fontColor: 'black',
           boxWidth: 30
         }
@@ -64,7 +76,7 @@ const updateChartJS = (element, data) => {
 }
 
 export default ({ labelBar, title, colorOfBackground, datas, widthBar, heightBar, titleChartBar }) =>
-  <div id={`${title}_div`} class="line">
+  <div id={`${title}_div`} class="bar">
     <canvas id={`${title}_canvas`}
       oncreate={(element) => initChartJs(element, { labelBar, title, titleChartBar, colorOfBackground, datas, widthBar, heightBar })}
       onupdate={(element) => updateChartJS(element, {
@@ -76,7 +88,7 @@ export default ({ labelBar, title, colorOfBackground, datas, widthBar, heightBar
           data: datas
         }]
       })}
-      width='800'
-      height='400'
+      width='700'
+      height='500'
     ></canvas>
   </div>

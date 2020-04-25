@@ -2,6 +2,7 @@
 @import './SideBar';
 @import './Loadingbar';
 @import './Dougnut';
+@import './Bar.css';
 @import './Top3';
 @import './Top1';
 @import './Counter';

@@ -38,7 +38,6 @@ export default ({ festivals }) => {
           </DomainContent>
         )
       }} />
-
       <Route path='/localisation/:region' render={({ match }) => {
         const region = match.params.region
         return (
