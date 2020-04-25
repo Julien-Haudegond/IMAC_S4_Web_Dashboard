@@ -9,7 +9,7 @@
     "build": "npm run prebuild && cpx '404.html' docs",
     "lint": "eslint .",
     "clean": "rimraf .cache dist",
-    "clean-all": "rimraf .cache dist docs node_modules"
+    "clean-all": "rimraf .cache dist node_modules"
   },
   "repository": {
     "type": "git",
