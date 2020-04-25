@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel ./index.html -p 3000 --out-dir ./dist",
-    "build": "parcel build ./index.html --out-dir ./docs --public-url ./IMAC_S4_Web_Dashboard/",
+    "build": "parcel build ./index.html --out-dir ./docs --public-url .",
     "lint": "eslint .",
     "clean": "rimraf .cache dist docs",
     "clean-all": "rimraf .cache dist docs node_modules"
@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/Julien-Haudegond/IMAC_S4_Web_Dashboard/issues"
   },
-  "homepage": "https://github.com/Julien-Haudegond/IMAC_S4_Web_Dashboard#readme",
+  "homepage": ".",
   "dependencies": {
     "@babel/runtime": "^7.9.2",
     "@hyperapp/logger": "^0.5.0",

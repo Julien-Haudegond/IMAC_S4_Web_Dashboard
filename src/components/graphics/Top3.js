@@ -1,7 +1,8 @@
+/* eslint-disable import/no-absolute-path */
 import { h } from 'hyperapp'
 import { getOrderedListWithOccurences } from '../utils/Utils'
 
-import King from '../../../images/king.png'
+import King from '/images/king.png'
 
 export default ({ festivals, festivalsfilter }) => {
   const orderedList = getOrderedListWithOccurences(festivals, festivalsfilter)

@@ -1,11 +1,14 @@
+/* eslint-disable import/no-absolute-path */
 import { h } from 'hyperapp'
 import DomainItem from './DomainItem'
+
+import Arrow from '/images/arrow.png'
 
 export default ({ domains }) => {
   return (
     <div class="item">
       <input type="checkbox" id="A"/>
-      <img src="https:zupimages.net/up/20/16/fjl5.png" class="arrow"/><label for="A">Domaines</label>
+      <img src={Arrow} class="arrow"/><label for="A">Domaines</label>
       <ul>
         {
           domains.items.map(item =>

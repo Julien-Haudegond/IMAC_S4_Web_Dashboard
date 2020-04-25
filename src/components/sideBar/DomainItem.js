@@ -1,5 +1,8 @@
+/* eslint-disable import/no-absolute-path */
 import { h } from 'hyperapp'
 import { Link } from '@hyperapp/router'
+
+import Arrow from '/images/arrow.png'
 
 export default ({ name, subdomains }) => {
   const newName = name.replace(/\s+/g, '-').toLowerCase() // Change the domain name from something like "Hello World" to "hello-world"
@@ -11,7 +14,7 @@ export default ({ name, subdomains }) => {
     <li>
       <div class="sub-item">
         <input type="checkbox" id={idAndFor}/>
-        <img src="https:zupimages.net/up/20/16/fjl5.png" class="arrow"/>
+        <img src={Arrow} class="arrow"/>
         <label for={idAndFor}>
           <Link to={domainPath}>
             <a href="#">{name}</a>

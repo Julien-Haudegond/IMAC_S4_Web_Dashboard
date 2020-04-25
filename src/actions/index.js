@@ -1,12 +1,15 @@
+/* eslint-disable import/no-absolute-path */
 import axios from 'axios'
 import { location } from '@hyperapp/router'
+
+import Loading from '/images/loading.gif'
 
 export default {
   location: location.actions,
 
   setLoading: () => state => {
     document.body.classList.add('loader')
-    const htmlContent = '<p id="loading"> La fête va bientôt commencer... <img src="https://zupimages.net/up/20/16/m42g.gif"></p>'
+    const htmlContent = `<p id="loading"> La fête va bientôt commencer... <img src=${Loading}></p>`
     document.body.insertAdjacentHTML('afterbegin', htmlContent)
 
     return { ...state, ready: false, loading: true }

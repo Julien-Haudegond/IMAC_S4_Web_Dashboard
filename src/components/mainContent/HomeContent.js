@@ -1,18 +1,22 @@
+/* eslint-disable import/no-absolute-path */
 import { h } from 'hyperapp'
 import Counter from '../graphics/Counter'
 import moment from 'moment'
+
+import Circle from '/images/soleil.png'
+import Transat from '/images/transat.png'
 
 export default ({ festivals }) => {
   return (
     <div>
       <h1> Bonjour, envie d’être <mark> un as des festivals </mark> <br/> de bandes dessinées ? </h1>
       <div class="circle">
-        <img src="https:zupimages.net/up/20/15/vdj5.png" alt="circle"/>
+        <img src={Circle} alt="circle"/>
       </div>
       <div class="home-content">
         <div class="content">
           <div class="image_home">
-            <img src="https:zupimages.net/up/20/15/n3lq.png" alt="image_home"/>
+            <img src={Transat} alt="image_home"/>
           </div>
           <div class="text_home">
             <p> <mark> Vous </mark> pouvez ici chercher <br/> des informations sur les <br/> festivals français. </p>
