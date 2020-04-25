@@ -2,7 +2,7 @@ import { h } from 'hyperapp'
 import { Link } from '@hyperapp/router'
 
 export default ({ name }) => {
-  const localisationPath = '/localisation/' + name
+  const localisationPath = '/IMAC_S4_Web_Dashboard/localisation/' + name
 
   return (
     <li>

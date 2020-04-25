@@ -8,7 +8,7 @@ export default ({ name, subdomains }) => {
   const newName = name.replace(/\s+/g, '-').toLowerCase() // Change the domain name from something like "Hello World" to "hello-world"
   const idAndFor = `A-${newName}` // A is the letter used on the upper div but IDK why
 
-  const domainPath = '/domain/' + name
+  const domainPath = '/IMAC_S4_Web_Dashboard/domain/' + name
 
   return (
     <li>

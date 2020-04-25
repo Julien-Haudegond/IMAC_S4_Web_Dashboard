@@ -5,7 +5,7 @@ export default ({ name }) => {
   const monthName = name.split('(')[1].split(')')[0] // Get the string inside the parenthesis
   const monthNameToShow = monthName.charAt(0).toUpperCase() + monthName.slice(1)
 
-  const periodPath = '/period/' + name
+  const periodPath = '/IMAC_S4_Web_Dashboard/period/' + name
 
   return (
     <li>
