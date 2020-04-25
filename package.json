@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel ./index.html -p 3000 --out-dir ./dist",
-    "build": "parcel build ./index.html --out-dir ./docs --public-url /IMAC_S4_Web_Dashboard/",
+    "prebuild": "rimraf docs && parcel build ./index.html --out-dir ./docs --public-url /IMAC_S4_Web_Dashboard/",
+    "build": "npm run prebuild && cpx '404.html' docs",
     "lint": "eslint .",
     "clean": "rimraf .cache dist",
     "clean-all": "rimraf .cache dist docs node_modules"
@@ -25,6 +26,7 @@
     "@hyperapp/router": "^0.7.2",
     "axios": "^0.19.2",
     "chart.js": "^2.9.3",
+    "cpx": "^1.5.0",
     "hyperapp": "^1.2.10",
     "moment": "^2.24.0"
   },
