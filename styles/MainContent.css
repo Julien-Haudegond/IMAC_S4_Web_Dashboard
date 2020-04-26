@@ -1,12 +1,12 @@
 .main {
   position: relative;
-  width: 75vw;
+  width: 100vw;
   height: 100vh;
   top: 0;
-  left: 25vw;
   background-color: #FFFFFA;
   padding-top: 20px;
   font-weight:bold;
+  overflow-x: hidden;
 }
 
 .circle{
@@ -23,16 +23,8 @@
   z-index:4;
 }
 
-.domain{
-  margin-right:20px;
-}
-
-.localisation{
-  margin-right:20px;
-}
-
-.period{
-  margin-right:20px;
+.domain , .localisation , .period {
+  margin:0px 20px 40px 20px;
 }
 
 .main h1 mark{
@@ -49,7 +41,6 @@
 
 .home-counters {
   display: flex;
-  justify-content: space-around;
   width: 100%;
 }
 
@@ -87,13 +78,14 @@ p mark{
   padding: 0px 2px 0px 2px;
 }
 
-@media screen and (max-width: 780px){
+@media (min-width: 250px) and (max-width: 780px){
   .main {
     position: absolute;
     width: 100vw;
     top: 0;
     left: 0vw;
     padding-top: 80px;
+    overflow-x: visible;
   }
   
   .circle{
@@ -136,5 +128,8 @@ p mark{
     margin-top:20px;
     margin-left:20px;
   }
-  
+
+  .home-counters {
+    display: block;
+  }
 }

@@ -1,21 +1,23 @@
 .counter{
-    width:15vw;
+    margin-left:100px;
+    margin-right:50px;
+    width:400px;
     height: auto;
     background-color: #CA1551;
     border-radius: 20px;
     margin-top:20px;
     padding: 4px 10px 4px 10px;
     box-shadow: 8px -7px #F9C80E;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
   }
 
 .counter-title {
     color: #FFFFFF;
     font-weight: normal;
     padding-left: 10px;
+}
+
+.counter-bottom{
+    text-align: right;
 }
 
 .counter-text {
@@ -26,4 +28,10 @@
 
 .counter-text span {
     color: #F9C80E;
+}
+
+@media (min-width: 250px) and (max-width: 780px){
+    .counter{
+        margin-left: 20px;
+    }
 }
