@@ -53,6 +53,11 @@
   width: 100%;
 }
 
+.top-in-row {
+  display: flex;
+  justify-content: space-around;
+}
+
 .main .content{
   display: flex;
   width: 100%;

@@ -11,22 +11,26 @@ export default ({ festivals, totalCount }) => {
         festivalsnbtotal = {totalCount}
         festivalsview = {'localisation'}
       ></Loadingbar>
-      <Top3
-        festivals = {festivals}
-        festivalsfilter = {'department'}>
-      </Top3>
-      <Top3
-        festivals = {festivals}
-        festivalsfilter = {'domain'}>
-      </Top3>
-      <Top1
-        festivals = {festivals}
-        indexSentence = {'2'}>
-      </Top1>
-      <Top1
-        festivals = {festivals}
-        indexSentence = {'3'}>
-      </Top1>
+      <div class="top-in-row">
+        <Top3
+          festivals = {festivals}
+          festivalsfilter = {'department'}>
+        </Top3>
+        <Top3
+          festivals = {festivals}
+          festivalsfilter = {'domain'}>
+        </Top3>
+      </div>
+      <div class="top-in-row">
+        <Top1
+          festivals = {festivals}
+          indexSentence = {'2'}>
+        </Top1>
+        <Top1
+          festivals = {festivals}
+          indexSentence = {'3'}>
+        </Top1>
+      </div>
     </div>
   )
 }

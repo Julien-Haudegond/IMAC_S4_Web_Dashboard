@@ -2,4 +2,13 @@
     background-color: #EFF1ED;
     border-radius: 20px;
     margin-top: 20px;
+    min-width: 0;
+    width: 25vw;
+    height: 40vh;
+    padding: 2%;
   }
+
+.two-donuts-in-row {
+  display: flex;
+  justify-content: space-around;
+}

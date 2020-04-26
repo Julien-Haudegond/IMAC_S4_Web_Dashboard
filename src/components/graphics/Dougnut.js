@@ -18,8 +18,6 @@ const initChartJs = (element, props) => {
     },
 
     options: {
-      width: props.widthDoughnut,
-      height: props.heightDoughnut,
       style: 'background-color: #eff1ed',
       cutoutPercentage: 60,
       responsive: true,
@@ -79,7 +77,5 @@ export default ({ labelDoughnut, title, colorOfBackground, datas, widthDoughnut,
           data: datas
         }]
       })}
-      width='300'
-      height='300'
     ></canvas>
   </div>
