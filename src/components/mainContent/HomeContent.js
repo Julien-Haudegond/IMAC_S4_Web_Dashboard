@@ -9,7 +9,7 @@ import Transat from '/images/transat.png'
 export default ({ festivals }) => {
   return (
     <div>
-      <h1> Bonjour, envie d’être <mark> un as des festivals </mark> <br/> de bandes dessinées ? </h1>
+      <h1> Bonjour, envie d’être <mark> un as des festivals </mark> <br/> des territoires français ? </h1>
       <div class="circle">
         <img src={Circle} alt="circle"/>
       </div>
