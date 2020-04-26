@@ -17,23 +17,23 @@ export default ({ festivals, totalCount }) => {
       <Bar
         title={'Nombre de festivals'}
         titleChartBar={'Domaines de festivals les plus présents à cette période'}
-        labelBar={['Musiques actuelles', 'Cinéma et audiovisuel', 'Musique classiques', 'Cirque et Arts de la rue', 'Spectacle Vivant', 'Livre et littérature', 'Transdisciplinaire', 'Divers spectacle vivant', 'Pluridisciplinaire musique', 'Danse', 'Arts plastiques et visuels', 'Théâtre', 'Domaines divers', 'Divers spectacle vivant', 'Musiques Actuelles']}
+        labelBar={['Musiques actuelles', 'Cinéma et audiovisuel', 'Musiques classiques', 'Cirque et Arts de la rue', 'Spectacle Vivant', 'Livre et littérature', 'Transdisciplinaire', 'Divers spectacle vivant', 'Pluridisciplinaire musique', 'Danse', 'Arts plastiques et visuels', 'Théâtre', 'Domaines divers']}
         datas={[
-          festivals.filter(item => (item.domaine === 'Musiques actuelles')).length,
-          festivals.filter(item => (item.domaine === 'Cinéma et audiovisuel')).length,
-          festivals.filter(item => (item.domaine === 'Musique classiques')).length,
-          festivals.filter(item => (item.domaine === 'Cirque et Arts de la rue)')).length,
-          festivals.filter(item => (item.domaine === 'Pluridisciplinaire Spectacle Vivant')).length,
-          festivals.filter(item => (item.domaine === 'Livre et littérature')).length,
-          festivals.filter(item => (item.domaine === 'Transdisciplinaire')).length,
-          festivals.filter(item => (item.domaine === 'Divers Spectacle Vivant')).length,
-          festivals.filter(item => (item.domaine === 'Pluridisciplinaire Musique')).length,
-          festivals.filter(item => (item.domaine === 'Danse')).length,
-          festivals.filter(item => (item.domaine === 'Arts plastiques et visuels')).length,
-          festivals.filter(item => (item.domaine === 'Théâtre')).length,
-          festivals.filter(item => (item.domaine === 'Domaines divers')).length,
-          festivals.filter(item => (item.domaine === 'Divers spectacle vivant' || 'Divers Spectacle Vivant')).length,
-          festivals.filter(item => (item.domaine === 'Musiques actuelles')).length
+          festivals.filter(item => (item.domain === 'Musiques actuelles' || item.domain === 'Musiques Actuelles')).length,
+          festivals.filter(item => (item.domain === 'Cinéma et audiovisuel')).length,
+          festivals.filter(item => (item.domain === 'Musiques classiques')).length,
+          festivals.filter(item => (item.domain === 'Cirque et Arts de la rue')).length,
+          festivals.filter(item => (item.domain === 'Pluridisciplinaire Spectacle vivant')).length,
+          festivals.filter(item => (item.domain === 'Livre et littérature')).length,
+          festivals.filter(item => (item.domain === 'Transdisciplinaire')).length,
+          festivals.filter(item => (item.domain === 'Divers Spectacle vivant')).length,
+          festivals.filter(item => (item.domain === 'Pluridisciplinaire Musique')).length,
+          festivals.filter(item => (item.domain === 'Danse')).length,
+          festivals.filter(item => (item.domain === 'Arts plastiques et visuels')).length,
+          festivals.filter(item => (item.domain === 'Théâtre')).length,
+          festivals.filter(item => (item.domain === 'Domaines divers')).length,
+          festivals.filter(item => (item.domain === 'Divers spectacle vivant' || item.domain === 'Divers Spectacle Vivant')).length,
+          festivals.filter(item => (item.domain === 'Domaines Divers')).length
         ]}
         colorOfBackground={'#19a09c'}
         widthBar={300}
