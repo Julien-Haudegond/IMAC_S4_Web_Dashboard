@@ -1,5 +1,9 @@
 /*Func*/
 
+.under-logo{
+  text-decoration: none;
+}
+
 .multi-level, .item ul, .nav input[type="checkbox"] {
   display: none;
 }
@@ -37,7 +41,6 @@
 /*Styles*/
 
 .main-nav {
-  position: fixed;
   z-index:5;
 }
 
@@ -200,7 +203,7 @@ label {
 
 /* Responsive */
 
-@media screen and (max-width: 780px){
+@media (min-width: 250px) and (max-width: 780px){
 
   .side-label{
     display: block;
