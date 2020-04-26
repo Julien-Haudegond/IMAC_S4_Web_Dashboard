@@ -4,6 +4,8 @@
 
 Frontend [application](https://julien-haudegond.github.io/IMAC_S4_Web_Dashboard/) based on this [API](https://data.culture.gouv.fr/explore/dataset/panorama-des-festivals/api/). Built with Hyperapp framework and Parcel.
 
+Notre rapport de projet : [ici](https://github.com/Julien-Haudegond/IMAC_S4_Web_Dashboard/blob/master/documentation/Project_Report.pdf)
+
 ![Festiv-HomeScreen](images/Festiv_HomeScreen.png)
 
 Authors:
